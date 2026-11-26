@@ -8,7 +8,7 @@
     <title>JOIVI | Joias que revelam sua essência</title>
 
     <link rel="stylesheet" href="style.css">
-
+    
   
 </head>
 
@@ -73,14 +73,115 @@
 
 <!-- ANEIS -->
 
-<section class="aneis-superior">
-    <img src="img/anel 1.png" alt="anel">
-    <img src="img/anel 2.png" alt="anel">
-    <img src="img/anel 3.png" alt="anel">
-    <img src="img/anel 4.png" alt="anel">
+
+<section class="colecao">
+
+    <!-- Primeira fileira de produtos -->
+    <div class="produtos-destaque">
+
+        <div class="produto-destaque">
+            <img src="img/anel-charlotte.png" alt="Anel Charlotte">
+            <h3>Anel Charlotte</h3>
+            <p>R$ 65,00</p>
+        </div>
+
+        <div class="produto-destaque">
+            <img src="img/anel-elegante.png" alt="Anel Elegante">
+            <h3>Anel Elegante</h3>
+            <p>R$ 60,00</p>
+        </div>
+
+        <div class="produto-destaque">
+            <img src="img/anel-imperatriz.png" alt="Anel Imperatriz">
+            <h3>Anel Imperatriz</h3>
+            <p>R$ 70,00</p>
+        </div>
+
+        <div class="produto-destaque">
+            <img src="img/anel-serena.png" alt="Anel Serena">
+            <h3>Anel Serena</h3>
+            <p>R$ 61,00</p>
+        </div>
+
+    </div>
+
+    <!-- Divisor decorativo -->
+    <div class="divisor">
+        <span></span>
+        <div class="flor-divisora">✧</div>
+        <span></span>
+    </div>
+
+    <!-- Segunda fileira de produtos -->
+    <div class="produtos-cards">
+
+        <div class="card-produto">
+            <img src="img/produto-1.png" alt="Anel de pedra">
+            <a href="#">Ver produto <span>→</span></a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/produto-2.png" alt="Colar com pingente">
+            <a href="#">Ver produto <span>→</span></a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/produto-3.png" alt="Anel delicado">
+            <a href="#">Ver produto <span>→</span></a>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/produto-4.png" alt="Brincos">
+            <a href="#">Ver produto <span>→</span></a>
+        </div>
+
+    </div>
 
 </section>
 
 
+  <!-- CARROSSEL -->
+
+
+<section class="carrossel">
+
+    <div class="slides">
+
+        <div class="slide ativo">
+            <img src="img/banner-1.png" alt="Elegância em cada detalhe">
+        </div>
+
+        <div class="slide">
+            <img src="img/banner-1.png" alt="Joias para todos os momentos">
+        </div>
+
+        <div class="slide">
+            <img src="img/banner-1.png" alt="Realce sua essência">
+        </div>
+
+    </div>
+
+    <!-- Setas -->
+    <button class="seta anterior" onclick="mudarSlide(-1)">
+        &#10094;
+    </button>
+
+    <button class="seta proximo" onclick="mudarSlide(1)">
+        &#10095;
+    </button>
+
+    <!-- Indicadores -->
+    <div class="indicadores">
+        <span class="ponto ativo" onclick="irParaSlide(0)"></span>
+        <span class="ponto" onclick="irParaSlide(1)"></span>
+        <span class="ponto" onclick="irParaSlide(2)"></span>
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
 
 </header>
