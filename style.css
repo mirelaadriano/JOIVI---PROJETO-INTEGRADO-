@@ -329,9 +329,9 @@ main p {
 /* CARROSSEL */
 
 .carrossel {
-    width: 95%;
-    max-width: 1200px;
-    height: 230px;
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
     margin: 90px auto;
     position: relative;
     overflow: hidden;
@@ -410,4 +410,83 @@ main p {
 .ponto.ativo {
     opacity: 1;
     background: #A9C6E8;
+}
+
+
+/*FOTOS INTERLIGADAS*/
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #262320;
+  --link-color: #6f94cf;
+  --link-hover: #4f76b5;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  line-height: 1.5;
+}
+
+.editorial-showcase {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 40px 56px;
+}
+
+.text-block p {
+  font-size: clamp(1.125rem, 1.8vw, 1.45rem);
+  max-width: 34ch;
+}
+
+.text-block a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.text-block a:hover,
+.text-block a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.media-block img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Em telas menores, mantém imagem acima do texto na segunda linha */
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .row:first-child .media-block {
+    order: -1;
+  }
 }
